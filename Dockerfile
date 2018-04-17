@@ -43,6 +43,7 @@ RUN source $NVM_DIR/nvm.sh && yarn install --ignore-engines
 COPY . .
 
 EXPOSE 3000
+EXPOSE 3035
 
 # Starts the Puma server.
 CMD source $NVM_DIR/nvm.sh && foreman start

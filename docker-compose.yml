@@ -16,6 +16,7 @@ services:
     build: .
     ports:
       - '3000:3000'
+      - '3035:3035'
     volumes:
       - '.:/home/web/site'
     env_file:

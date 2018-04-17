@@ -7,4 +7,7 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
+import "../src/default"
+import "../src/application"
+
 console.log('Hello World from Webpacker')
