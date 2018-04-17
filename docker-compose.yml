@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  postgres:
+    image: 'postgres:9.6'
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'cartimes_postgres:/var/lib/postgresql/data'
+    env_file:
+      - '.env'
+
+  website:
+    depends_on:
+      - 'postgres'
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/home/web/site'
+    env_file:
+      - '.env'
+
+volumes:
+  cartimes_postgres:
